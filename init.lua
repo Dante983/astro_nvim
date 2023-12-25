@@ -28,6 +28,19 @@ return {
 
   lsp = {
     -- customize lsp formatting options
+    config = {
+      intelephense = {
+        settings = {
+          intelephense = {
+            diagnostics = {
+              undefinedProperties = false,
+              undefinedMethods = false,
+              undefinedTypes = false,
+            },
+          },
+        },
+      },
+    },
     formatting = {
       -- control auto formatting on save
       format_on_save = {
