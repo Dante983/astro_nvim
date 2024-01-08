@@ -5,6 +5,7 @@ return {
     { import = "astrocommunity/color/transparent-nvim" },
     { import = "astrocommunity/git/git-blame-nvim" },
     { import = "astrocommunity/git/blame-nvim" },
+    { import = "astrocommunity/motion/leap-nvim" },
 
     { -- further customize the options set by the community
       "catppuccin",
