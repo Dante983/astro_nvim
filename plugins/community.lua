@@ -6,6 +6,10 @@ return {
     { import = "astrocommunity/git/git-blame-nvim" },
     { import = "astrocommunity/git/blame-nvim" },
     { import = "astrocommunity/motion/leap-nvim" },
+    { import = "astrocommunity/bars-and-lines/heirline-vscode-winbar" },
+    { import = "astrocommunity/bars-and-lines/bufferline-nvim" },
+    { import = "astrocommunity/utility/noice-nvim" },
+    -- { import = "astrocommunity/editing-support/yanky-nvim" },
 
     { -- further customize the options set by the community
       "catppuccin",
