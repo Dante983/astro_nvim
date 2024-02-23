@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "catppuccin",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -29,18 +29,18 @@ return {
   lsp = {
     -- customize lsp formatting options
     config = {
-      -- intelephense = {
-      --   settings = {
-      --     intelephense = {
-      --       diagnostics = {
-      --         undefinedProperties = false,
-      --         undefinedMethods = false,
-      --         undefinedTypes = false,
-      --         undefinedFunctions = false
-      --       },
-      --     },
-      --   },
-      -- },
+      intelephense = {
+        settings = {
+          intelephense = {
+            diagnostics = {
+              undefinedProperties = false,
+              undefinedMethods = false,
+              undefinedTypes = false,
+              undefinedFunctions = false
+            },
+          },
+        },
+      },
     },
     formatting = {
       -- control auto formatting on save

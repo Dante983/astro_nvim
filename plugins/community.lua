@@ -9,25 +9,26 @@ return {
     { import = "astrocommunity/bars-and-lines/heirline-vscode-winbar" },
     { import = "astrocommunity/bars-and-lines/bufferline-nvim" },
     { import = "astrocommunity/utility/noice-nvim" },
+    { import = "astrocommunity/scrolling/nvim-scrollbar" },
     -- { import = "astrocommunity/editing-support/yanky-nvim" },
 
-    { -- further customize the options set by the community
-      "catppuccin",
-      opts = {
-        integrations = {
-          sandwich = false,
-          noice = true,
-          mini = true,
-          leap = true,
-          markdown = true,
-          neotest = true,
-          cmp = true,
-          overseer = true,
-          lsp_trouble = true,
-          rainbow_delimiters = true,
-        },
-      },
-    },
+    -- { -- further customize the options set by the community
+    --   "catppuccin",
+    --   opts = {
+    --     integrations = {
+    --       sandwich = false,
+    --       noice = true,
+    --       mini = true,
+    --       leap = true,
+    --       markdown = true,
+    --       neotest = true,
+    --       cmp = true,
+    --       overseer = true,
+    --       lsp_trouble = true,
+    --       rainbow_delimiters = true,
+    --     },
+    --   },
+    -- },
     { import = "astrocommunity.completion.copilot-lua" },
     { -- further customize the options set by the community
       "zbirenbaum/copilot.lua",

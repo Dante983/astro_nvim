@@ -27,6 +27,9 @@ return {
       end,
       desc = "Pick to close",
     },
+    ["<S->>"] = { "<gv>", desc = "Unindent line" },
+    ["<S-<>>"] = { ">gv", desc = "Indent line" },
+    ["<leader>W"] = { ":noautocmd w<CR>", desc = "Save without formatting" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
@@ -34,12 +37,12 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<Tab>"] =  
       { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
-      ["<S-Tab>"] = {
-        function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-        desc = "Previous buffer",
-      },
-      ["<S->>"] = { "<gv", desc = "Unindent line" },
-      ["<S-<>"] = { ">gv", desc = "Indent line" }
+    ["<S-Tab>"] = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
+    ["<leader>ccx"] = { ":CopilotChatInPlace<cr>", desc = "CopilotChat - Run in-place code" }
+        
   },
   t = {
     -- setting a mapping to false will disable it
