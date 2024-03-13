@@ -35,14 +35,14 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<Tab>"] =  
+    ["<Tab>"] =
       { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
     ["<S-Tab>"] = {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
-    ["<leader>ccx"] = { ":CopilotChatInPlace<cr>", desc = "CopilotChat - Run in-place code" }
-        
+    ["<leader>z"] = { ":CopilotChatInPlace<cr>", desc = "CopilotChat - Run in-place code" },
+    ["<leader>td"] = { "<cmd>Neotree close<cr><cmd>tabnew<cr><bar><cmd>DBUI<cr>", desc = "Open DB UI" },
   },
   t = {
     -- setting a mapping to false will disable it

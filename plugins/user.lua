@@ -81,7 +81,36 @@ return {
   },
   {
     "ThePrimeagen/vim-be-good"
+  },
+  {
+    'kristijanhusak/vim-dadbod-ui',
+    dependencies = {
+      { 'tpope/vim-dadbod', lazy = true },
+      { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql', 'clickhouse', 'mongodb' }, lazy = true },
+    },
+    cmd = {
+      'DBUI',
+      'DBUIToggle',
+      'DBUIAddConnection',
+      'DBUIFindBuffer',
+    },
+    init = function()
+      -- Your DBUI configuration
+      vim.g.db_ui_use_nerd_fonts = 1
+    end,
+  },
+  {
+    "rebelot/kanagawa.nvim"
   }
+  -- {
+  -- "nvim-neo-tree/neo-tree.nvim",
+  --   opts = {
+  --     view = {
+  --       width = 30
+  --     }
+  --   }
+  -- }
+
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
