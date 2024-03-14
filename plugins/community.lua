@@ -10,6 +10,7 @@ return {
     { import = "astrocommunity/bars-and-lines/bufferline-nvim" },
     { import = "astrocommunity/utility/noice-nvim" },
     { import = "astrocommunity/scrolling/nvim-scrollbar" },
+    { import = "astrocommunity/scrolling/mini-animate" },
     -- { import = "astrocommunity/editing-support/yanky-nvim" },
 
     -- { -- further customize the options set by the community
