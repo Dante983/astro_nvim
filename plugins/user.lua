@@ -20,13 +20,13 @@ return {
     opts = {
       show_help = "yes", -- Show help text for CopilotChatInPlace, default: yes
       debug = false, -- Enable or disable debug mode, the log file will be in ~/.local/state/nvim/CopilotChat.nvim.log
-      disable_extra_info = 'no', -- Disable extra information (e.g: system prompt) in the response.
-      language = "English" -- Copilot answer language settings when using default prompts. Default language is English.
+      disable_extra_info = "no", -- Disable extra information (e.g: system prompt) in the response.
+      language = "English", -- Copilot answer language settings when using default prompts. Default language is English.
       -- proxy = "socks5://127.0.0.1:3000", -- Proxies requests via https or socks.
       -- temperature = 0.1,
     },
     build = function()
-      vim.notify("Please update the remote plugins by running ':UpdateRemotePlugins', then restart Neovim.")
+      vim.notify "Please update the remote plugins by running ':UpdateRemotePlugins', then restart Neovim."
     end,
     event = "VeryLazy",
     keys = {
@@ -58,41 +58,45 @@ return {
         "<leader>ccr",
         "<cmd>CopilotChatReset<cr>", -- Reset chat history and clear buffer.
         desc = "CopilotChat - Reset chat history and clear buffer",
-      }
+      },
     },
   },
   {
     "tzachar/local-highlight.nvim",
     event = "BufRead",
     config = function()
-        require('local-highlight').setup({
-          file_types = {'php', 'js'}, -- If this is given only attach to this
-          -- OR attach to every filetype except:
-          disable_file_types = {'tex'},
-          hlgroup = 'Search',
-          cw_hlgroup = nil,
-          -- Whether to display highlights in INSERT mode or not
-          insert_mode = false,
-      })
-    end
+      require("local-highlight").setup {
+        file_types = { "php", "js" }, -- If this is given only attach to this
+        -- OR attach to every filetype except:
+        disable_file_types = { "tex" },
+        hlgroup = "Search",
+        cw_hlgroup = nil,
+        -- Whether to display highlights in INSERT mode or not
+        insert_mode = false,
+      }
+    end,
   },
   {
-   "lewis6991/gitsigns.nvim" 
+    "lewis6991/gitsigns.nvim",
   },
   {
-    "ThePrimeagen/vim-be-good"
+    "ThePrimeagen/vim-be-good",
   },
   {
-    'kristijanhusak/vim-dadbod-ui',
+    "kristijanhusak/vim-dadbod-ui",
     dependencies = {
-      { 'tpope/vim-dadbod', lazy = true },
-      { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql', 'clickhouse', 'mongodb' }, lazy = true },
+      { "tpope/vim-dadbod", lazy = true },
+      {
+        "kristijanhusak/vim-dadbod-completion",
+        ft = { "sql", "mysql", "plsql", "clickhouse", "mongodb" },
+        lazy = true,
+      },
     },
     cmd = {
-      'DBUI',
-      'DBUIToggle',
-      'DBUIAddConnection',
-      'DBUIFindBuffer',
+      "DBUI",
+      "DBUIToggle",
+      "DBUIAddConnection",
+      "DBUIFindBuffer",
     },
     init = function()
       -- Your DBUI configuration
@@ -100,8 +104,26 @@ return {
     end,
   },
   {
-    "rebelot/kanagawa.nvim"
-  }
+    -- colorsheme
+    "rebelot/kanagawa.nvim",
+  },
+  {
+    -- colorscheme #2
+    "askfiy/killer-queen",
+    priority = 100,
+  },
+  {
+    "olivercederborg/poimandres.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("poimandres").setup {
+        -- leave this setup function empty for default config
+        -- or refer to the configuration section
+        -- for configuration options
+      }
+    end,
+  },
   -- {
   -- "nvim-neo-tree/neo-tree.nvim",
   --   opts = {

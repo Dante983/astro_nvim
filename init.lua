@@ -36,7 +36,7 @@ return {
               undefinedProperties = false,
               undefinedMethods = false,
               undefinedTypes = false,
-              undefinedFunctions = false
+              undefinedFunctions = false,
             },
           },
         },
