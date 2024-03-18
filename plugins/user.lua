@@ -1,20 +1,4 @@
 return {
-  -- {
-  --   "jellydn/CopilotChat.nvim",
-  --   branch = "canary",
-  --   opts = {},
-  --   build = function()
-  --     vim.defer_fn(function()
-  --       vim.cmd("UpdateRemotePlugins")
-  --       vim.notify("CopilotChat - Updated remote plugins. Please restart Neovim.")
-  --     end, 3000)
-  --   end,
-  --   event = "VeryLazy",
-  --   keys = {
-  --     { "<leader>cce", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
-  --     { "<leader>cct", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
-  --   },
-  -- },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     opts = {
@@ -113,6 +97,7 @@ return {
     priority = 100,
   },
   {
+    -- losa ova
     "olivercederborg/poimandres.nvim",
     lazy = false,
     priority = 1000,
@@ -124,23 +109,16 @@ return {
       }
     end,
   },
-  -- {
-  -- "nvim-neo-tree/neo-tree.nvim",
-  --   opts = {
-  --     view = {
-  --       width = 30
-  --     }
-  --   }
-  -- }
-
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
-  -- },
+  {
+    "neanias/everforest-nvim",
+    version = false,
+    lazy = false,
+    priority = 1000, -- make sure to load this before all the other start plugins
+    -- Optional; default configuration will be used if setup isn't called.
+    config = function()
+      require("everforest").setup {
+        -- Your config here
+      }
+    end,
+  },
 }
