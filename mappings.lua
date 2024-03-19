@@ -36,9 +36,9 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<Tab>"] =
-      { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
+      { '<cmd>BufferLineCycleNext<CR>', desc = "Next buffer" },
     ["<S-Tab>"] = {
-      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      '<cmd>BufferLineCyclePrev<CR>',
       desc = "Previous buffer",
     },
     ["<leader>z"] = { ":CopilotChatInPlace<cr>", desc = "CopilotChat - Run in-place code" },
